@@ -10,13 +10,16 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "express": "cross-env NODE_ENV=dev node server.js",
+    "mock": "node mock/server.js 4000"
   },
   "dependencies": {
     "nuxt": "^1.0.0-rc11"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
+    "cors": "^2.8.4",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",

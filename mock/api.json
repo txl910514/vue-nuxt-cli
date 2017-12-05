@@ -1,0 +1,1457 @@
+{
+  "Demo": [
+    {
+      "url":"/template/select",
+      "desc": "模板1",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "模板1",
+        "data": {
+          "pages":[9,10,11,13,14]
+        }
+      }
+    },
+    {
+      "url":"/current_month_repair",
+      "desc": "获取当月维修情况",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "获取当月维修情况",
+        "data|1-8": [
+          {"month":"@now('month')","value":"@integer(20,100)"}
+        ]
+      }
+    },
+    {
+      "url":"/page_directory",
+      "desc": "目录",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "目录",
+        "data": [
+            "<div class='directory-title'><div class='directory-title-num'><span>01</span><div></div></div><div class='directory-title-item clear'><div class=left>xxx</div><div class=left>01</div></div></div>",
+            "<div class=directory-item clear><div class=left>1.1</div><div class=left>价值估值</div><div class=left>01</div></div>",
+            "<div class=directory-item clear><div class=left>1.2</div><div class=left>品牌分析</div><div class=left>01</div></div>",
+            "<div class=directory-item clear><div class=left>1.3</div><div class=left>ttttttt</div><div class=left>01</div></div>"
+        ]
+      }
+    },
+    {
+      "url":"/current_month_device",
+      "desc": "获取当月设备数量",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "获取当月设备数量",
+        "data": {
+          "total_device": 200
+        }
+      }
+    },
+    {
+      "url":"/login/insert",
+      "desc": "保留登录信息",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "保留登录信息",
+        "data": {
+        }
+      }
+    },
+    {
+      "url":"/home_page",
+      "desc": "封面首页接口---page1",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "获取成功",
+        "page":1,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "logo":"logo图片路径",
+          "hospitalName":"医院名字",
+          "secondTitle":"设备盘点运数据库资产",
+          "reportTime":"@date('yyyy年MM月dd日')"
+        }
+      }
+    },
+    {
+      "url":"/cooperation_timeline",
+      "desc": "合作时间轴",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "合作时间轴获取成功--page3",
+        "page": 3,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|3-6": [
+            {
+              "time": "@date('yyyy.MM.dd')",
+              "text_1": "@cword(5,20)",
+              "text_2": "@cword(5,20)",
+              "text_3": "@cword(3,20)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "url":"/standing_book_distribute",
+      "desc": "台账情况",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "台账情况获取成功--page4",
+        "page": 4,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|6": [
+            {
+              "value": "@integer(20,100)",
+              "text": "@word(3,5)"
+            }
+          ],
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "treatmentStr":"@word(15,20)",
+          "unTreatmentStr":"@word(15,20))",
+          "totalStr":"@word(15,20))",
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/standing_book",
+      "desc": "台账情况-使用时长分布",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "台账情况使用时长分布获取成功--page5",
+        "page": 5,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|4": [
+            {
+              "value": "@integer(20,100)",
+              "name": "@word(3,5)"
+            }
+          ],
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "descData|4":[
+            {
+              "desc": "@cword(3,6)",
+              "num":"@integer(20,100)",
+              "percent": "@integer(0,100)",
+              "amount":"@integer(20,10000)"
+            }
+          ],
+          "isValue":true,
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/rule_process",
+      "desc": "盘点规则及流程",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "盘点规则及流程--page6",
+        "page": 6,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ]
+        }
+      }
+    },
+    {
+      "url":"/classify_book",
+      "desc": "分类对账情况",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "分类台账情况获取成功--page10",
+        "page": 10,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|2": [
+            {
+              "value": "@integer(20,100)",
+              "name": "@word(3,5)"
+            }
+          ],
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "descData|2":[
+            {
+              "desc": "@cword(3,6)",
+              "platQuasiNum":"@integer(20,100)",
+              "platQuasiCount":"@integer(20,100)",
+              "platSurplusNum":"@integer(20,100)",
+              "platSurplusCount":"@integer(20,100)",
+              "platLoseNum":"@integer(20,100)",
+              "platLoseCount":"@integer(20,100)",
+              "percent": "@integer(0,100)",
+              "amount":"@integer(20,10000)"
+            }
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/key_equipment_use_analysis",
+      "desc": "重点设备使用情况分析",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "重点设备使用情况分析获取成功--page24",
+        "page": 24,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|2": [
+            {
+              "value": "@integer(20,100)",
+              "name": "@word(3,5)"
+            }
+          ],
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "descData|2":[
+            {
+              "desc": "@cword(3,6)",
+              "platQuasiNum":"@integer(20,100)",
+              "platQuasiCount":"@integer(20,100)",
+              "percent": "@integer(0,100)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "url":"/key_equipment_service_analysis",
+      "desc": "重点设备超期服役分析",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "重点设备超期服役分析获取成功--page25",
+        "page": 25,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|2": [
+            {
+              "value": "@integer(20,100)",
+              "name": "@word(3,5)"
+            }
+          ],
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "descData|2":[
+            {
+              "desc": "@cword(3,6)",
+              "platQuasiNum":"@integer(20,100)",
+              "platQuasiCount":"@integer(20,100)",
+              "platSurplusNum":"@integer(20,100)",
+              "platSurplusCount":"@integer(20,100)",
+              "platLoseNum":"@integer(20,100)",
+              "platLoseCount":"@integer(20,100)",
+              "percent": "@integer(0,100)",
+              "amount":"@integer(20,10000)"
+            }
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/checkAccount_adminOffice",
+      "desc": "对账情况-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "各科室对账情况--page8",
+        "page":8,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|10": [
+            {
+              "adminName": "@cword(3,6)",
+              "checkExact": "@natural(5,99)",
+              "inventoryProfit": "@natural(5,99)",
+              "inventoryLosses": "@natural(5,99)",
+              "checkExactRate": "@float(0,1,1,2)",
+              "equipmentValuation": "@natural(45,199)"
+            }
+          ],
+          "textData|2": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ]
+        }
+      }
+    },
+    {
+      "url":"/check_account",
+      "desc": "对账情况-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "对账情况--page7",
+        "page":7,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "hospitalName": "@cword(3,6)",
+            "value": "@float(0,0,1,2)"
+          },
+          "textData|4": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ]
+        }
+      }
+    },
+    {
+      "url":"/checkAccount_ageLimit",
+      "desc": "对账情况-使用年限-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "对账情况--page9",
+        "page":9,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "y_data|16": ["@float(0,0)"]
+          },
+          "textData": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/adminOffice_deviceNum",
+      "desc": "科室多维分析-设备数量分析-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "科室多维分析-设备数量分析--page14",
+        "page":14,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|5": ["@cword(3,5)"],
+            "y1_data|5": ["@natural(5,134)"],
+            "y2_data|5": ["@natural(8,174)"]
+          },
+          "textData|3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ]
+        }
+      }
+    },
+    {
+      "url":"/adminOffice_useAge",
+      "desc": "科室多维分析-使用年限分析-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "科室多维分析-使用年限分析--page18",
+        "page":18,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "meansData": [
+              [
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"]
+              ],
+              [
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"]
+              ],
+              [
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"]
+              ],
+              [
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"]
+              ]
+            ],
+            "x_data": {
+              "x_point": 90,
+              "x_label": "使用年限(年)\n平均MMMM年"
+            },
+            "y_data": {
+              "y_point": 49,
+              "y_label": "设备数量(台)\n平均MMMM台"
+            }
+          },
+          "textData|4": [
+            "<h4><i class='icon1'></i><span>@cword(3,5)</span></h4><p class='paragraph-text'>@csentence(136)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/keynoteDevice_useAge",
+      "desc": "重要设备分析-使用年限分析-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "重要设备分析-使用年限分析--page26",
+        "page":26,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "meansData": [
+              [
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"]
+              ],
+              [
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"]
+              ],
+              [
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"]
+              ],
+              [
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"]
+              ]
+            ],
+            "x_data": {
+              "x_point": 90,
+              "x_label": "使用年限(年)\n平均MMMM年"
+            },
+            "y_data": {
+              "y_point": 49,
+              "y_label": "设备数量(台)\n平均MMMM台"
+            }
+          },
+          "textData|4": [
+            "<h4><i class='icon1'></i><span>@cword(3,5)</span></h4><p class='paragraph-text'>@csentence(136)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/adminOffice_brand",
+      "desc": "科室多维分析-品牌分析-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "科室多维分析-品牌分析--page15",
+        "page":15,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|5": [
+            {
+              "adminName": "@cword(3,5)",
+              "brandData|5": [
+                {
+                  "brandName": "@cword(3,5)",
+                  "value": "@natural(8,174)"
+                }
+              ]
+            }
+          ],
+          "textData|2": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ]
+        }
+      }
+    },
+    {
+      "url":"/adminOffice_category",
+      "desc": "科室多维分析-品类分析-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "科室多维分析-品类分析--page16",
+        "page":16,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|5": [
+            {
+              "adminName": "@cword(3,5)",
+              "categoryData|5": [
+                {
+                  "categoryName": "@cword(3,5)",
+                  "value": "@natural(8,174)"
+                }
+              ]
+            }
+          ],
+          "textData|2": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ]
+        }
+      }
+    },
+    {
+      "url":"/standingBook_finkDisk",
+      "desc": "台账情况-医信精盘-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "台账情况-医信精盘-page11",
+        "page":11,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "new_percent": "@float(0,0, 1, 3)",
+            "old_percent": "@float(0,0, 1, 3)"
+          },
+          "textData|2": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ]
+        }
+      }
+    },
+    {
+      "url":"/adminOffice_overtimeDevice",
+      "desc": "科室多维分析-超期设备分析-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "科室多维分析-超期设备分析--page19",
+        "page":19,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|10": [
+            {
+              "adminName": "@cword(3,6)",
+              "overTimeDeviceNum": "@natural(5,99)",
+              "overTimeDeviceAge": "@natural(5,99)",
+              "overTimeDeviceAgeValuation": "@natural(5,99)"
+            }
+          ],
+          "textData|3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/keynoteDevice_distribute",
+      "desc": "重点设备分析-分布情况-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "重点设备分析-分布情况--page22",
+        "page":22,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|10": [
+            {
+              "categoryName": "@cword(3,6)",
+              "distribute": "@cword(7,12)"
+            }
+          ],
+          "textData|2": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ]
+        }
+      }
+    },
+    {
+      "url":"/lifeDevice_distribute",
+      "desc": "生命设备分析-分布情况-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "生命设备分析-分布情况--page27",
+        "page":27,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|10": [
+            {
+              "categoryName": "@cword(3,6)",
+              "distribute": "@cword(7,12)"
+            }
+          ],
+          "textData|2": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ]
+        }
+      }
+    },
+    {
+      "url":"/device_value",
+      "desc": "设备价值分析-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "设备价值分析--page20",
+        "page":20,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|15": ["@natural(0, 15)"],
+            "y_data|15": ["@natural(20, 105)"]
+          },
+          "textData": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/useTime_analyse",
+      "desc": "使用时长分析-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "使用时长分析--page29",
+        "page":29,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|15": ["@natural(0, 15)"],
+            "y_data|15": ["@natural(20, 105)"]
+          },
+          "textData": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/profit_device_value",
+      "desc": "盘盈分析-设备价值-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "盘盈分析-设备价值--page31",
+        "page":31,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|15": ["@natural(0, 15)"],
+            "y_data|15": ["@natural(20, 105)"]
+          },
+          "textData": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/profit_medicine_device",
+      "desc": "盘盈分析-医疗设备-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "盘盈分析-医疗设备--page32",
+        "page":32,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "medicineChart": {
+              "x_data|5": ["@cword(3,6)"],
+              "y_data|5": ["@natural(20, 105)"],
+              "textData": ["<p class='paragraph-text'>@csentence(26)<b>@csentence(6)</b>@csentence(16)</p>"]
+            },
+            "noMedicineChart": {
+              "x_data|5": ["@cword(3,6)"],
+              "y_data|5": ["@natural(20, 105)"],
+              "textData": ["<p class='paragraph-text'>@csentence(26)<b>@csentence(6)</b>@csentence(16)</p>"]
+            }
+          }
+        }
+      }
+    },
+    {
+      "url":"/losses_device_value",
+      "desc": "盘亏分析-设备价值-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "盘亏分析-设备价值--page35",
+        "page":35,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|15": ["@natural(0, 15)"],
+            "y_data|15": ["@natural(20, 105)"]
+          },
+          "textData": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/losses_medicine_device",
+      "desc": "盘亏分析-医疗设备-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "盘亏分析-医疗设备--page36",
+        "page":36,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "medicineChart": {
+              "x_data|5": ["@cword(3,6)"],
+              "y_data|5": ["@natural(20, 105)"],
+              "textData": ["<p class='paragraph-text'>@csentence(26)<b>@csentence(6)</b>@csentence(16)</p>"]
+            },
+            "noMedicineChart": {
+              "x_data|5": ["@cword(3,6)"],
+              "y_data|5": ["@natural(20, 105)"],
+              "textData": ["<p class='paragraph-text'>@csentence(26)<b>@csentence(6)</b>@csentence(16)</p>"]
+            }
+          }
+        }
+      }
+    },
+    {
+      "url":"/losses_useAge",
+      "desc": "盘亏分析-盘亏设备使用年限分析-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "盘亏分析-盘亏设备使用年限分析--page38",
+        "page":38,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "meansData": [
+              [
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"]
+              ],
+              [
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"]
+              ],
+              [
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@float(8,174,2,2)", "@float(8,174,2,2)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"]
+              ],
+              [
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"],
+                ["@natural(8,174)", "@natural(8,174)"]
+              ]
+            ],
+            "x_data": {
+              "x_point": 90.67,
+              "x_label": "使用年限(年)\n平均MMMM年"
+            },
+            "y_data": {
+              "y_point": 49.12,
+              "y_label": "设备数量(台)\n平均MMMM台"
+            }
+          },
+          "textData": [
+            "<h4><i class='icon1'></i><i class='icon3'></i><span>@cword(3,5)</span></h4><p class='paragraph-text'>@csentence(136)</p>",
+            "<h4><i class='icon2'></i><i class='icon4'></i><span>@cword(3,5)</span></h4><p class='paragraph-text'>@csentence(136)</p>",
+            "<h4><i></i><i></i><span>@cword(3,5)</span></h4><p class='paragraph-text'>@csentence(136)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/cloud_book_distribute",
+      "desc": "云账情况",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "云账情况获取成功--page13",
+        "page": 13,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|6": [
+            {
+              "value": "@integer(20,100)",
+              "text": "@word(3,5)"
+            }
+          ],
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "treatmentStr":"@word(15,20)",
+          "unTreatmentStr":"@word(15,20))",
+          "totalStr":"@word(15,20))"
+        }
+      }
+    },
+    {
+      "url":"/category_analysis",
+      "desc": "医疗设备品类分析",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "医疗设备品类分析获取成功--page21",
+        "page": 21,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "TreatmentChartData": {
+            "x_data|5": ["@cword(3,5)"],
+            "y_data|5": ["@natural(5,134)"],
+            "totalStr": "@csentence(6)<b>@csentence(6)</b>@csentence(26)"
+          },
+          "unTreatmentChartData": {
+            "x_data|5": ["@cword(3,5)"],
+            "y_data|5": ["@natural(5,134)"],
+            "totalStr": "@csentence(16)<b>@csentence(2)</b>@csentence(26)"
+          }
+        }
+      }
+    },
+    {
+      "url":"/key_equipment_brand_analysis",
+      "desc": "重点品牌分析",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "重点品牌分析获取成功--page23",
+        "page": 23,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|5": ["@cword(3,5)"],
+            "y_data|5": ["@natural(5,134)"],
+            "source|5": ["@natural(0,1)"],
+            "y_max":160
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/lifeDevice_brand_analysis",
+      "desc": "生命支持类设备-品牌分析",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "生命支持类设备-品牌分析获取成功--page28",
+        "page": 28,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|5": ["@cword(3,5)"],
+            "y_data|5": ["@natural(5,134)"],
+            "source|5": ["@natural(0,1)"],
+            "y_max":160
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url": "/adminOffice_deviceValue",
+      "desc": "科室多维分析-价值分析",
+      "mock": true,
+      "res": {
+        "success": true,
+        "message": "科室多维分析-价值分析获取成功--page17",
+        "page": 17,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|5": [
+            {
+              "name": "@cword(3,6)",
+              "val": [
+                50,
+                60,
+                70,
+                80,
+                90
+              ],
+              "total": 500
+            }
+          ],
+          "maxCount":100,
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/manage_advise",
+      "desc": "管理问题与建议-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "管理问题与建议--page40",
+        "page":40,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "textData|5":[
+            "<h4>管理问题:</h4><h4>问题描述</h4><h4>建议:</h4><h4>建议详情</h4>"
+          ]
+        }
+      }
+    },
+    {
+      "url":"/definition_concept",
+      "desc": "定义&概念-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "定义&概念--page42",
+        "page":42,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "textData": [
+            "<h4>折旧方法:</h4><p>@csentence(236)</p>",
+            "<h4>折旧方法:</h4><p>@csentence(136)</p>",
+            "<h4>折旧方法:</h4><p>@csentence(136)</p>",
+            "<h4>折旧方法:</h4><h4>折旧方法:</h4><h4>折旧方法:</h4><h4>折旧方法:</h4>",
+            "<h4>折旧方法:</h4><h4>折旧方法:</h4>"
+          ]
+        }
+      }
+    },
+    {
+      "url":"/category_appraisement",
+      "desc": "各品类设备估值-唐小林",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "各品类设备估值--page43",
+        "page":43,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|10": [
+            {
+              "categoryName": "@cword(3,6)",
+              "deviceAppraisement": "@natural(7,12)"
+            }
+          ],
+          "textData|3": [
+            "<p class='paragraph-text'>@csentence(136)</p>"
+          ]
+        }
+      }
+    },
+    {
+      "url":"/department_profit_analysis",
+      "desc": "科室盘盈分析",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "科室盘盈分析获取成功--page34",
+        "page": 34,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|2": [
+            {
+              "value": "@integer(20,100)",
+              "name": "@word(3,5)"
+            }
+          ],
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "descData|8":[
+            {
+              "roomName": "@cword(3,6)",
+              "num":"@integer(20,100)",
+              "val":"@integer(20,10000)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "url":"/profit_brand_device",
+      "desc": "盘盈分析-盘盈品牌分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "盘盈分析-盘盈品牌分析--page33",
+        "page":33,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|5": ["@cword(3,5)"],
+            "y_data|5": ["@natural(5,134)"],
+            "source|5": ["@natural(0,1)"],
+            "y_max":160
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/losses_brand_device",
+      "desc": "盘亏分析-盘亏品牌分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "盘亏分析-盘亏品牌分析--page37",
+        "page":37,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|5": ["@cword(3,5)"],
+            "y_data|5": ["@natural(5,134)"],
+            "source|5": ["@natural(0,1)"],
+            "y_max":160
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/repair_base_case",
+      "desc": "维修基本情况",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "维修基本情况获取成功--page45",
+        "page": 45,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|2": [
+            {
+              "value": "@integer(20,100)",
+              "name": "@word(3,5)",
+              "percent": "@integer(0,100)"
+            }
+          ],
+          "timeData|2":[
+            {
+              "percent": "@integer(30,100)",
+              "name": "@word(3,5)",
+              "day":"@integer(0,10)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "url":"/time_analysis",
+      "desc": "时间分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "时间分析--page46",
+        "page":46,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|7": ["@cword(3,5)"],
+            "y_out|7": ["@natural(10,100)"],
+            "y_in|7": ["@natural(10,100)"]
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/department_analysis",
+      "desc": "时间分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "时间分析--page47",
+        "page":47,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|7": ["@cword(3,5)"],
+            "y_out|7": ["@natural(10,100)"],
+            "y_in|7": ["@natural(10,100)"]
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/value_repair_analysis",
+      "desc": "价值维修分析",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "价值维修分析--page48",
+        "page": 48,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|4": [
+            {
+              "value": "@integer(20,100)",
+              "name": "@word(3,5)"
+            }
+          ],
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "descData|4":[
+            {
+              "desc": "@cword(3,6)",
+              "num":"@integer(20,100)",
+              "percent": "@integer(0,100)",
+              "equipment_num":"@integer(20,10000)"
+            }
+          ],
+          "isValue":true,
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/use_year_analysis",
+      "desc": "使用年限分析",
+      "mock":true,
+      "res": {
+        "success": true,
+        "message": "使用年限分析--page49",
+        "page": 49,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData|4": [
+            {
+              "value": "@integer(20,100)",
+              "name": "@word(3,5)"
+            }
+          ],
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "descData|4":[
+            {
+              "desc": "@cword(3,6)",
+              "num":"@integer(20,100)",
+              "percent": "@integer(0,100)",
+              "equipment_num":"@integer(20,10000)"
+            }
+          ],
+          "isValue":true,
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/varieties_repair_analysis",
+      "desc": "品类维修分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "品类维修分析--page50",
+        "page":50,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|5": ["@cword(3,5)"],
+            "y_data|5": ["@natural(5,134)"]
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/key_equipment_repair_analysis",
+      "desc": "重点设备维修分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "重点设备维修分析--page51",
+        "page":51,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|7": ["@cword(3,5)"],
+            "y_out|7": ["@natural(10,100)"],
+            "y_in|7": ["@natural(10,100)"]
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/equipment_repair_brand_analysis",
+      "desc": "重点设备维修品牌分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "重点设备维修品牌分析--page52",
+        "page":52,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|5": ["@cword(3,5)"],
+            "y_data|5": ["@natural(5,134)"],
+            "source|5": ["@natural(0,1)"]
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/equipment_repair_ticks_analysis",
+      "desc": "重点设备维修工单分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "重点设备维修工单分析--page53",
+        "page":53,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|7": ["@cword(3,5)"],
+            "y_ticks|7": ["@natural(10,100)"],
+            "y_days|7": ["@natural(10,100)"]
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/equipment_error_analysis",
+      "desc": "重点设备故障原因分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "重点设备故障原因分析--page54",
+        "page":54,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|5": ["@cword(3,5)"],
+            "y_data|5": ["@natural(5,134)"]
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/life_equip_repair_time_analysis",
+      "desc": "生命支持类设备维修时间分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "生命支持类设备维修时间分析--page55",
+        "page":55,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|7": ["@cword(3,5)"],
+            "y_out|7": ["@natural(10,100)"],
+            "y_in|7": ["@natural(10,100)"]
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/life_equip_repair_brand_analysis",
+      "desc": "生命支持类设备维修品牌分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "生命支持类设备维修品牌分析--page56",
+        "page":56,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|5": ["@cword(3,5)"],
+            "y_data|5": ["@natural(5,134)"],
+            "source|5": ["@natural(0,1)"]
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/life_equip_repair_category_analysis",
+      "desc": "生命支持类设备维修品类分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "生命支持类设备维修品类分析--page57",
+        "page":57,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|7": ["@cword(3,5)"],
+            "y_ticks|7": ["@natural(10,100)"],
+            "y_days|7": ["@natural(10,100)"]
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    },
+    {
+      "url":"/life_equip_error_analysis",
+      "desc": "生命支持类设备故障原因分析",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "生命支持类设备故障原因分析--page58",
+        "page":58,
+        "data": {
+          "pageNum":"@integer(20,100)",
+          "chapterNum":"@integer(20,100)",
+          "chartData": {
+            "x_data|5": ["@cword(3,5)"],
+            "y_data|5": ["@natural(5,134)"]
+          },
+          "textData|1-3": [
+            "<p class='paragraph-text'>@csentence(86)<b>@csentence(6)</b>@csentence(36)</p>"
+          ],
+          "remark": "@cword(8,14)"
+        }
+      }
+    }
+  ]
+}

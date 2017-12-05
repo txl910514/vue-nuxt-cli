@@ -3,22 +3,14 @@
     <div>
       <logo/>
       <h1 class="title">
-        vue-nuxt-cli
+        可选
       </h1>
       <h2 class="subtitle">
-        Nuxt.js project
+        可选 project
       </h2>
       <div class="links">
-        <router-link to="/hhh" class="button--green">Go to hhh</router-link>
-        <router-link to="/client" class="button--grey">Go to client</router-link>
-      </div>
-      <div class="links">
-        <router-link to="/client/td" class="button--green">Go to client/td</router-link>
-        <router-link to="/client" class="button--grey">Go to client</router-link>
-      </div>
-      <div class="links">
-        <router-link to="/user/td" class="button--green">Go to user/td</router-link>
-        <router-link to="/user" class="button--grey">Go to user</router-link>
+        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
+        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
       </div>
     </div>
   </section>
@@ -28,6 +20,12 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  validate ({ params }) {
+    // Must be a number
+    return /^\d+$/.test(params.name)
+    // console.log(params)
+    // return true
+  },
   components: {
     Logo
   }

@@ -1,25 +1,12 @@
 <template>
   <section class="container">
     <div>
-      <logo/>
       <h1 class="title">
-        vue-nuxt-cli
+        client-td
       </h1>
       <h2 class="subtitle">
-        Nuxt.js project
+        user-td project
       </h2>
-      <div class="links">
-        <router-link to="/hhh" class="button--green">Go to hhh</router-link>
-        <router-link to="/client" class="button--grey">Go to client</router-link>
-      </div>
-      <div class="links">
-        <router-link to="/client/td" class="button--green">Go to client/td</router-link>
-        <router-link to="/client" class="button--grey">Go to client</router-link>
-      </div>
-      <div class="links">
-        <router-link to="/user/td" class="button--green">Go to user/td</router-link>
-        <router-link to="/user" class="button--grey">Go to user</router-link>
-      </div>
     </div>
   </section>
 </template>

@@ -2,6 +2,9 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  css: [
+    'assets/css/main.css'
+  ],
   head: {
     title: 'vue-nuxt-cli',
     meta: [
